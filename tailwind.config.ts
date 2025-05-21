@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,34 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Chef Mate AI custom colors
+				'chef-green': {
+					DEFAULT: '#4CAF50',
+					50: '#E8F5E9',
+					100: '#C8E6C9',
+					200: '#A5D6A7',
+					300: '#81C784',
+					400: '#66BB6A',
+					500: '#4CAF50',
+					600: '#43A047',
+					700: '#388E3C',
+					800: '#2E7D32',
+					900: '#1B5E20',
+				},
+				'chef-orange': {
+					DEFAULT: '#FF9800',
+					50: '#FFF3E0',
+					100: '#FFE0B2',
+					200: '#FFCC80',
+					300: '#FFB74D',
+					400: '#FFA726',
+					500: '#FF9800',
+					600: '#FB8C00',
+					700: '#F57C00',
+					800: '#EF6C00',
+					900: '#E65100',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +112,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-subtle': {
+					'0%, 100%': {
+						opacity: '1',
+					},
+					'50%': {
+						opacity: '0.7',
+					},
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+					},
+					'50%': {
+						transform: 'translateY(-10px)',
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+			},
+			fontFamily: {
+				'display': ['Montserrat', 'sans-serif'],
+				'body': ['Inter', 'sans-serif'],
 			}
 		}
 	},
